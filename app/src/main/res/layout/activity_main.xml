@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <LinearLayout
+
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/layoutall_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:visibility="gone"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/geninfo_cv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp">
+
+
+                    <TextView
+                        android:id="@+id/geninfo_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="2dp"
+                        android:text="General Information"
+                        android:textColor="#707DC4"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/publicNametv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/geninfo_tv"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/publicNametv"
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <EditText
+                            android:id="@+id/et_first_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/nametv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_first_name"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nametv"
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/et_last_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/gendertv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_last_name"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+
+                    <Spinner
+                        android:id="@+id/genderSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/gendertv"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/purple_700"
+                        android:backgroundTint="#F1EDED"
+
+                        android:textColorHint="#808080" />
+
+
+                    <TextView
+                        android:id="@+id/profilepic_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/genderSpinner"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="2dp"
+                        android:text="Profile Pic"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/profilepic_iv"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@id/profilepic_tv"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/ic_launcher_foreground" />
+
+                    <Button
+                        android:id="@+id/browse_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+
+                        android:layout_below="@id/profilepic_tv"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/profilepic_iv"
+                        android:text="Browse" />
+
+
+
+                    <TextView
+                        android:id="@+id/emailtv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_below="@+id/profilepic_iv"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_email_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/emailtv"
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/et_email_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/contacttv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_email_name"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_contact_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/contacttv"
+
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/et_contact_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/companyinfo_cv"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp">
+
+
+                    <TextView
+                        android:id="@+id/companyinfo_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="2dp"
+                        android:text="Company Information"
+                        android:textColor="#707DC4"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/companyNametv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/companyinfo_tv"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_company_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/companyNametv"
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <EditText
+                            android:id="@+id/et_company_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/abouttv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_company_name"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/abouttv"
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/et_about"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/companylogo_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layout_about"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="2dp"
+                        android:text="LOGO"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/companylogo_iv"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@id/companylogo_tv"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/ic_launcher_foreground" />
+
+                    <Button
+                        android:id="@+id/browsecompany_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/companylogo_tv"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/companylogo_iv"
+                        android:text="Browse" />
+
+
+                    <TextView
+                        android:id="@+id/companybanner_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/companylogo_iv"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="2dp"
+                        android:text="LOGO"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/companybanner_iv"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@id/companybanner_tv"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/ic_launcher_foreground" />
+
+                    <Button
+                        android:id="@+id/browsecompanybanner_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/companybanner_tv"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/companybanner_iv"
+                        android:text="Browse" />
+
+
+                    <TextView
+                        android:id="@+id/companyaddresstv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/companybanner_iv"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_companyaddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/companyaddresstv"
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/et_companyaddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/supportinfo_cv"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp">
+
+
+                    <TextView
+                        android:id="@+id/supportinfo_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="2dp"
+                        android:text="Support Information"
+                        android:textColor="#707DC4"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/supportnumbertv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/supportinfo_tv"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_supportnumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/supportnumbertv"
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <EditText
+                            android:id="@+id/et_supportnumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/supportemailtv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_supportnumber"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_supportemail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/supportemailtv"
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/et_supportemail"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/facebookid_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_supportemail"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_facebookid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/facebookid_tv"
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/et_facebookid"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/twitterid_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_facebookid"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_twitterid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/twitterid_tv"
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/et_twitterid"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/seoinfo_cv"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp">
+
+
+                    <TextView
+                        android:id="@+id/seoinfo_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="2dp"
+                        android:text="SEO Information"
+                        android:textColor="#707DC4"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/metakeywordtv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/seoinfo_tv"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_metakeyword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/metakeywordtv"
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <EditText
+                            android:id="@+id/et_metakeyword"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/metadescription_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_metakeyword"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_metadescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/metadescription_tv"
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/et_metadescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/addressinfo_cv"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp">
+
+
+                    <TextView
+                        android:id="@+id/addressinfo_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="2dp"
+                        android:text="Address Information"
+                        android:textColor="#707DC4"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/aaddresstv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/addressinfo_tv"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_aaddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/aaddresstv"
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <EditText
+                            android:id="@+id/et_aaddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/city_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_aaddress"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/city_tv"
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/et_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/postalcode_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_city"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_postalcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/postalcode_tv"
+                        android:textColorHint="#808080"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/et_postalcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#F1EDED"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:textColorHint="#808080"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <TextView
+                        android:id="@+id/statetv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_postalcode"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+
+                    <Spinner
+                        android:id="@+id/stateSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/statetv"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/purple_700"
+                        android:backgroundTint="#F1EDED"
+
+                        android:textColorHint="#808080" />
+
+                    <TextView
+                        android:id="@+id/countrytv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/stateSpinner"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="3dp"
+                        android:text="xyzdjcvsjc" />
+
+
+                    <Spinner
+                        android:id="@+id/countrySpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/countrytv"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/purple_700"
+                        android:backgroundTint="#F1EDED"
+
+                        android:textColorHint="#808080" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </ScrollView>
+</layout>

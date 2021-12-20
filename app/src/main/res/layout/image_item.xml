@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:id="@+id/image_root_layout"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/profilepicc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:padding="2dp"
+        android:text="Profile Pic"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/profilepics_iv"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/profilepicc_tv"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <Button
+        android:id="@+id/browse_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+
+        android:layout_below="@id/profilepicc_tv"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@id/profilepics_iv"
+        android:text="Browse" />
+
+
+</RelativeLayout>
